@@ -1,7 +1,7 @@
 {
   "name": "xunk-calendar-demo",
   "description": "Demo for xunk-calendar",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
