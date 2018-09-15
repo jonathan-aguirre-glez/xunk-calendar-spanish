@@ -30,6 +30,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
     @Input() public heatmap = {};
 
+    @Input() public badgesMap = {};
+
     /** Emits the new date on change */
     @Output() change: EventEmitter<any> = new EventEmitter();
 
@@ -40,14 +42,14 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
     /** Constants */
     public readonly monthNames =
       [
-        'January', 'February', 'March', 'April',
-        'May', 'June', 'July', 'August',
-        'September', 'October', 'November', 'December'
+        'Enero', 'Febrero', 'Marzo', 'Abril',
+        'Mayo', 'Junio', 'Julio', 'Agosto',
+        'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'
       ];
     public readonly dayNames =
       [
-        'Sunday', 'Monday', 'Tuesday', 'Wednesday',
-        'Thrusday', 'Friday', 'Saturday'
+        'Domingo', 'Lunes', 'Martes', 'Miercoles',
+        'Jueves', 'Viernes', 'Sabado'
       ];
 
       /* Get RGB from CSS color */
@@ -231,4 +233,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       }
       return;
     }
+
+    public loadBadgesNumber(col: number): number {
+      const badges =  this.badgesMap[col];
+      if ( badges == null || badges === undefined) {
+        return 0;
+      }
+      if (typeof badges === 'number') {
+
+        return badges;
+      }
+      return 0;
+    }
+
+
 }

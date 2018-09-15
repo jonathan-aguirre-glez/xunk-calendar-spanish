@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import {MatBadgeModule} from '@angular/material/badge';
 
 import { XunkCalendarComponent } from './xunk-calendar.component';
 
@@ -15,6 +16,7 @@ import { XunkCalendarComponent } from './xunk-calendar.component';
         CommonModule,
         MatIconModule,
         MatButtonModule,
+        MatBadgeModule
      ],
     exports: [
         XunkCalendarComponent
